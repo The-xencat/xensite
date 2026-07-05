@@ -2,50 +2,56 @@
 
 import { motion } from "framer-motion";
 
-export default function Navbar(){
+const links = [
+  { name: "About", id: "about" },
+  { name: "Journey", id: "journey" },
+  { name: "Projects", id: "projects" },
+  { name: "Contact", id: "contact" },
+];
 
-return(
+export default function Navbar() {
+  return (
+    <motion.header
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="fixed top-0 z-50 w-full px-6 pt-6"
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-[#C8A96A]/20 bg-[#08111D]/70 px-8 py-4 backdrop-blur-xl">
 
-<motion.header
+        <div className="flex items-center gap-4">
 
-initial={{y:-80,opacity:0}}
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#C8A96A] text-[#C8A96A] font-bold">
+            X
+          </div>
 
-animate={{y:0,opacity:1}}
+          <div>
+            <h2 className="font-[var(--font-cormorant)] text-2xl">
+              Kusum Malviya
+            </h2>
 
-transition={{duration:1}}
+            <p className="text-xs uppercase tracking-[0.35em] text-[#C8A96A]">
+              The Royal Hall
+            </p>
+          </div>
 
-className="fixed top-0 left-0 z-50 w-full"
+        </div>
 
->
+        <nav className="hidden gap-10 md:flex">
 
-<div className="mx-auto flex max-w-7xl items-center justify-between px-10 py-7">
+          {links.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className="transition duration-300 hover:text-[#C8A96A]"
+            >
+              {link.name}
+            </a>
+          ))}
 
-<div>
+        </nav>
 
-<h1 className="text-2xl tracking-[0.4em] text-[#C8A96A]">
-
-XEN
-
-</h1>
-
-</div>
-
-<nav className="hidden gap-10 uppercase tracking-[0.25em] md:flex">
-
-<a href="#about">About</a>
-
-<a href="#projects">Projects</a>
-
-<a href="#contact">Contact</a>
-
-<a href="#resume">Resume</a>
-
-</nav>
-
-</div>
-
-</motion.header>
-
-)
-
+      </div>
+    </motion.header>
+  );
 }

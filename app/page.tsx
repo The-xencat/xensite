@@ -45,6 +45,13 @@ import Languages from "@/components/skills/Languages";
 import Certifications from "@/components/certifications/Certifications";
 import Quote from "@/components/quotes/Quote";
 import Contact from "@/components/contact/Contact";
+import AdviceForm from "@/components/community/AdviceForm";
+import AdviceWall from "@/components/community/AdviceWall";
+import ReviewForm from "@/components/community/ReviewForm";
+import TrustScore from "@/components/community/TrustScore";
+import VisitorCounter from "@/components/community/VisitorCounter";
+import ViewResumeButton from "@/components/contact/ViewResumeButton";
+import ResumeButton from "@/components/contact/ResumeButton";
 
 export default function Home() {
   return (
@@ -58,6 +65,14 @@ export default function Home() {
       <Certifications />
       <Quote />
       <Contact />
+      <AdviceForm />
+      <AdviceWall />
+      <ReviewForm />
+      <TrustScore />
+      <VisitorCounter />
+      <ViewResumeButton />
+      <ResumeButton />
+
     </>
   );
 }

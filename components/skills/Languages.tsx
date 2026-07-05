@@ -15,10 +15,10 @@ const languages = [
     language: "Kannada",
     level: "Fluent",
   },
-  {
-    language: "French",
-    level: "Learning (B1)",
-  },
+//   {
+//     language: "French",
+//     level: "Learning (B1)",
+//   },
 ];
 
 export default function Languages() {
